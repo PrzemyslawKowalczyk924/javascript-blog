@@ -44,7 +44,7 @@ const titleClickHandler = function (event) {
   }
   targetArticle.classList.add('active');
 }
-/*A to co?*/
+
 const links = document.querySelectorAll('.titles a');
 
 for (let link of links) {
@@ -58,28 +58,36 @@ const optArticleSelector = '.post',
 function generateTitleLinks() {
   /*remove contents of titleList*/
   const titleList = document.querySelector(optTitleListSelector);
-  
-    titleList.innerHTML = '';
-  
+
+  titleList.innerHTML = '';
+
   console.log(titleList);
 
   /*for each article*/
   const articles = document.querySelectorAll('.post');
+
+  /*find all articles and save them to variable: articles*/
+  let html = '';
+
   for (let article of articles) {
+    const articleId = article.getAttribute('id');
+    console.log('ArticleId to: ' + articleId)
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    console.log('articleTitle to :' + articleTitle);
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    console.log('html link to: ' + linkHTML);
+    //titleList.insertAdjacentHTML('beforebegin', linkHTML);
+    console.log('titleList to jest: ' + titleList)
+    console.log('To html: ' + html);
+    html = html + linkHTML;
   }
 
+  titleList.innerHTML = html;
+
   /*get the article id*/
-  const articleId = titleList.getAttribute("id");
-
   /*find the title element*/
-  const articleTitle = article.querySelector(optTitleSelector).innerHTML; 
-
   /*get the title from title element*/
-  const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>'; 
-  console.log(linkHTML);
-
   /*create html of the link*/
-
   /*insert link into titleList*/
 
 }
