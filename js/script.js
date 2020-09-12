@@ -38,7 +38,6 @@ const titleClickHandler = function (event) {
   console.log(targetArticle);
 
   /* [DONE] add class 'active' to the correct article */
-  const links = document.querySelectorAll('.titles a');
   for (let link of links) {
     link.addEventListener('click', titleClickHandler);
   }
@@ -46,7 +45,7 @@ const titleClickHandler = function (event) {
 }
 
 const links = document.querySelectorAll('.titles a');
-
+console.log('Check const links: ' + links);
 for (let link of links) {
   link.addEventListener('click', titleClickHandler);
 }
