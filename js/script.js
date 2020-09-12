@@ -39,12 +39,13 @@ const titleClickHandler = function (event) {
 
   /* [DONE] add class 'active' to the correct article */
   const links = document.querySelectorAll('.titles a');
+  /*Dlaczego powyżej znajduje się stała const links i poniżej również? Tzn czemu ona jest deklarowana dwa razy?*/
+  console.log('links: ' + links);
   for (let link of links) {
     link.addEventListener('click', titleClickHandler);
   }
   targetArticle.classList.add('active');
 }
-
 
 
 const optArticleSelector = '.post',
@@ -56,40 +57,39 @@ function generateTitleLinks() {
   const titleList = document.querySelector(optTitleListSelector);
 
   titleList.innerHTML = '';
-  
   console.log(titleList);
 
-  /*for each article*/
-  const articles = document.querySelectorAll('.post');
-
   /*find all articles and save them to variable: articles*/
+  const articles = document.querySelectorAll('.post');
+  console.log(articles);
+
   let html = '';
 
+  /*for each article*/
   for (let article of articles) {
+    /*get the article id*/
     const articleId = article.getAttribute('id');
-    console.log('ArticleId to: ' + articleId)
+    console.log(articleId);
+    /*find the title element*/
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
-    console.log('articleTitle to :' + articleTitle);
+    console.log(articleTitle);
+    /*create html of the link*/
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log('html link to: ' + linkHTML);
+    console.log(linkHTML);
     //titleList.insertAdjacentHTML('beforebegin', linkHTML);
-    console.log('titleList to jest: ' + titleList)
-    console.log('To html: ' + html);
+    /*insert link into titleList*/
     html = html + linkHTML;
+    console.log(html);
   }
 
   titleList.innerHTML = html;
-
-  /*get the article id*/
-  /*find the title element*/
+  
   /*get the title from title element*/
-  /*create html of the link*/
-  /*insert link into titleList*/
   const links = document.querySelectorAll('.titles a');
-  console.log('Check const links: ' + links);
+  console.log(links);
   for (let link of links) {
-  link.addEventListener('click', titleClickHandler);
-}
+    link.addEventListener('click', titleClickHandler);
+  }
 
 }
 
