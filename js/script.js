@@ -47,7 +47,7 @@ function generateTitleLinks() {
   console.log(titleList);
 
   /*find all articles and save them to variable: articles*/
-  const articles = document.querySelectorAll('.post');
+  const articles = document.querySelectorAll(optArticleSelector);
   console.log(articles);
 
   let html = '';
