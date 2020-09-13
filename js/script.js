@@ -1,17 +1,10 @@
 'use strict';
 
-/*
-document.getElementById('test-button').addEventListener('click', function(){
-    const links = document.querySelectorAll('.titles a');
-    console.log('links:', links);
-  });
- */
-
 const titleClickHandler = function (event) {
   event.preventDefault();
   const clickedElement = this;
   console.log('Link was clicked!');
-  //console.log(event);
+  console.log(event);
 
   /* [DONE] remove class 'active' from all article links  */
   const activeLinks = document.querySelectorAll('.titles a.active');
@@ -33,18 +26,12 @@ const titleClickHandler = function (event) {
   const articleSelector = clickedElement.getAttribute("href");
   console.log(articleSelector);
 
-  /* [DONE] find the correct article using the selector (value of 'href' attribute) */
-  const targetArticle = document.querySelector(articleSelector);
-  console.log(targetArticle);
+    /* [DONE] find the correct article using the selector (value of 'href' attribute) */
+    const targetArticle = document.querySelector(articleSelector);
+    console.log(targetArticle);
 
-  /* [DONE] add class 'active' to the correct article */
-  const links = document.querySelectorAll('.titles a');
-  /*Dlaczego powyżej znajduje się stała const links i poniżej również? Tzn czemu ona jest deklarowana dwa razy?*/
-  console.log('links: ' + links);
-  for (let link of links) {
-    link.addEventListener('click', titleClickHandler);
-  }
-  targetArticle.classList.add('active');
+    /* [DONE] add class 'active' to the correct article */
+    targetArticle.classList.add('active');  
 }
 
 
@@ -83,14 +70,14 @@ function generateTitleLinks() {
   }
 
   titleList.innerHTML = html;
-  
-  /*get the title from title element*/
-  const links = document.querySelectorAll('.titles a');
-  console.log(links);
-  for (let link of links) {
-    link.addEventListener('click', titleClickHandler);
-  }
 
 }
 
 generateTitleLinks();
+
+ /*get the title from title element*/
+ const links = document.querySelectorAll('.titles a');
+ console.log(links);
+ for (let link of links) {
+   link.addEventListener('click', titleClickHandler);
+ }
