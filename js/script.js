@@ -23,16 +23,16 @@ const titleClickHandler = function (event) {
     console.log(activeArticles);
   }
   /* [DONE] get 'href' attribute from the clicked link */
-  const articleSelector = clickedElement.getAttribute("href");
+  const articleSelector = clickedElement.getAttribute('href');
   console.log(articleSelector);
 
-    /* [DONE] find the correct article using the selector (value of 'href' attribute) */
-    const targetArticle = document.querySelector(articleSelector);
-    console.log(targetArticle);
+  /* [DONE] find the correct article using the selector (value of 'href' attribute) */
+  const targetArticle = document.querySelector(articleSelector);
+  console.log(targetArticle);
 
-    /* [DONE] add class 'active' to the correct article */
-    targetArticle.classList.add('active');  
-}
+  /* [DONE] add class 'active' to the correct article */
+  targetArticle.classList.add('active');
+};
 
 
 const optArticleSelector = '.post',
@@ -75,11 +75,10 @@ function generateTitleLinks() {
 
 generateTitleLinks();
 
- /*get the title from title element*/
- const links = document.querySelectorAll('.titles a');
- console.log(links);
- for (let link of links) {
-   link.addEventListener('click', titleClickHandler);
- }
+/*get the title from title element*/
+const links = document.querySelectorAll('.titles a');
+console.log(links);
+for (let link of links) {
+  link.addEventListener('click', titleClickHandler);
+}
 
- 

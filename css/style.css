@@ -60,6 +60,15 @@ body {
 }
 
 /* Logo */
+.blog .container h1 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .logo {
   font-family: "Sacramento", cursive;
   font-weight: 400;
@@ -110,5 +119,24 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+/*paper-plane animation*/
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+.animation {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-plane {
+  position: absolute;
+  height: 100px;
+  top: 50%;
+  left: 0%;
 }
 /*# sourceMappingURL=style.css.map */
