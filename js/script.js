@@ -179,21 +179,15 @@ function generateAuthors() {
     let html = '';
     /* get author from post-author class */
     const articleAuthor = article.getAttribute('data-author');
-    console.log(articleAuthor);
-    /* START LOOP: for each author */
-    for (let author of articleAuthor) {
-      console.log(author);
-      /* generate HTML of the link */
-      const authorHTML = '<a href="#author-' + author + '">' + author + '</a>';
-      /* add generated code to html variable */
-      html = html + authorHTML;
-      console.log('Tu jest zagwostka!!! ' + html);
-      /* END LOOP: for each tag */
-    }
+    console.log('articleAuthor: ' + articleAuthor);
+    /* generate HTML of the link */
+    const authorHTML = '<a href="#author-' + articleAuthor + '">' + articleAuthor + '</a>';
+    /* add generated code to html variable */
+    html = html + authorHTML;
+    console.log('Tu jest zagwostka!!! ' + html);
     /* insert HTML of all the links into the tags wrapper */
     authorList.innerHTML = html;
     console.log('was is das?! ' + authorList.innerHTML);
-
     /* END LOOP: for every article: */
   }
 }
@@ -231,7 +225,7 @@ const authorClickHandler = function (event) {
     /* END LOOP: for each found tag link */
   }
   /* execute function "generateTitleLinks" with article selector as argument */
-  generateTitleLinks('[data-tags="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
 };
 
 function addClickListenersToAuthors() {
