@@ -84,6 +84,10 @@ for (let link of links) {
   link.addEventListener('click', titleClickHandler);
 }
 
+function calculateTagsParams(tags) {
+
+}
+
 function generateTags() {
   /* [NEW] create a new variable allTags with an empty array */
   let allTags = {};
@@ -124,6 +128,8 @@ function generateTags() {
       /* [NEW] find list of tags in right column */
       const tagList = document.querySelector('.tags');
 
+      const tagsParams = calculateTagsParams(allTags);
+      console.log('tagsParams:', tagsParams);
       /* [NEW] create variable for all links HTML code */
       let allTagsHTML = '';
       console.log(allTagsHTML);
@@ -171,7 +177,7 @@ const tagClickHandler = function (event) {
   /* START LOOP: for each active tag link */
   for (let activeTag of activeTagLinks) {
     /* remove class active */
-    activeTag.classList.remove('a[href="' + href + '"]');
+    activeTag.classList.remove('active');
     /* END LOOP: for each active tag link */
   }
   /* find all tag links with "href" attribute equal to the "href" constant */
