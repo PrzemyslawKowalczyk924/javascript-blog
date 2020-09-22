@@ -129,13 +129,35 @@ body {
   }
 }
 
-/*paper-plane animation*/
+/*tag-size section*/
+.tags li {
+  display: inline-block;
+}
+.tags li a.(text) {
 
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}*/
+}
+.tag-size-1 {
+  font-size: 14px;
+  color: cornflowerblue;
+}
+.tag-size-2 {
+  font-size: 16px;
+  color: chocolate;
+}
+.tag-size-3 {
+  font-size: 18px;
+  color: crimson;
+}
+.tag-size-4 {
+  font-size: 20px;
+  color: chartreuse;
+}
+.tag-size-5 {
+  font-size: 22px;
+  color: blueviolet;
+}
+
+/*paper-plane animation*/
 
 .animation {
   height: 100vh;

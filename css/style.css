@@ -121,12 +121,37 @@ body {
   margin: 0 10px 0 0;
 }
 
+/*tag-size section*/
+.tags li {
+  display: inline-block;
+}
+
+.tag-size-1 {
+  font-size: 14px;
+  color: cornflowerblue;
+}
+
+.tag-size-2 {
+  font-size: 16px;
+  color: chocolate;
+}
+
+.tag-size-3 {
+  font-size: 18px;
+  color: crimson;
+}
+
+.tag-size-4 {
+  font-size: 20px;
+  color: chartreuse;
+}
+
+.tag-size-5 {
+  font-size: 22px;
+  color: blueviolet;
+}
+
 /*paper-plane animation*/
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}*/
 .animation {
   height: 100vh;
   position: relative;

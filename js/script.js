@@ -160,7 +160,8 @@ function generateTags() {
         /* [NEW] generate code of a link and add it to allTagsHTML */
         //allTagsHTML += '<li><a class="tag-size-" href="#tag-' + tag + '">' + tag + '(' + allTags[tag] + ')' + '</a></li>';
         const tagLinkHTML = '<li>' + '<a class="' + optCloudClassPrefix + calculateTagClass(allTags[tag], tagsParams) + '"'
-        + 'href="#tag-' + tag + '"' + '>' + tag + '</a>' + '(' + allTags[tag] + ')' + '</li>';
+        + 'href="#tag-' + tag + '"' + '>' + tag + '</a>' + '</li>';
+        //+ '(' + allTags[tag] + ')'
         allTagsHTML += tagLinkHTML;
         //optCloudClassPrefix
         console.log('allTagsHTML', allTagsHTML);
