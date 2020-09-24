@@ -280,18 +280,23 @@ function generateAuthors() {
     /* [NEW] create variable for all links HTML code */
 
     /* [NEW] START LOOP: for each author in allAuthors: */
-    let allAuthorsHTML = '';
-
+    //let allAuthorsHTML = '';
+    const allAuthorsData = {authors: []};
     for (let author in allAuthors) {
-      console.log(allAuthorsHTML);
+      //console.log(allAuthorsHTML);
       console.log(author);
       /* [NEW] generate code of a link and add it to allAuthorsHTML */
-      const authorLinkHTML = '<li><a href="#author-' + author + '">' + author + '(' + allAuthors[author] + ')' + '</a></li>';
-      console.log('allTagsHTML', allAuthorsHTML);
-      allAuthorsHTML += authorLinkHTML;
+      //const authorLinkHTML = '<li><a href="#author-' + author + '">' + author + '(' + allAuthors[author] + ')' + '</a></li>';
+      //console.log('allTagsHTML', allAuthorsHTML);
+      //allAuthorsHTML += authorLinkHTML;
+      allAuthorsData.authors.push({
+        author: author,
+        count: allAuthors[author],
+      });
     }
     /*[NEW] Add insert HTML of all authors to right barside*/
-    listofAuthors.innerHTML = allAuthorsHTML;
+    //listofAuthors.innerHTML = allAuthorsHTML;
+    listofAuthors.innerHTML = templates.authorsLink(allAuthorsData);
 
     /* insert HTML of all the links into the tags wrapper */
     authorList.innerHTML = html;
@@ -349,4 +354,3 @@ function addClickListenersToAuthors() {
 }
 
 addClickListenersToAuthors();
-
