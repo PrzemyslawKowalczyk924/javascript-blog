@@ -2,7 +2,8 @@
 
 const templates = {
   articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
-  tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML)
+  tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
+  authorsLink: Handlebars.compile(document.querySelector('#template-authors-link').innerHTML),
 };
 
 const opt = {
