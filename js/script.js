@@ -1,5 +1,9 @@
 'use strict';
 
+const templates = {
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+};
+
 const opt = {
   ArticleSelector: '.post',
   TitleSelector: '.post-title',
@@ -68,7 +72,9 @@ function generateTitleLinks(customSelector = '') {
     const articleTitle = article.querySelector(opt.TitleSelector).innerHTML;
     console.log(articleTitle);
     /*create html of the link*/
-    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    //const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    const linkHTMLData = {id: articleId, title: articleTitle};
+    const linkHTML = templates.articleLink(linkHTMLData);
     console.log(linkHTML);
     //titleList.insertAdjacentHTML('beforebegin', linkHTML);
     /*insert link into titleList*/
@@ -132,7 +138,9 @@ function generateTags() {
     for (let tag of articleTagsArray) {
       console.log(tag);
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      //const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      const linkHTMLData = {id: 'tag-' + tag, title: tag};
+      const linkHTML = templates.articleLink(linkHTMLData);
       /* add generated code to html variable */
       html = html + linkHTML;
       console.log('html: ' + html);
@@ -249,9 +257,11 @@ function generateAuthors() {
     const articleAuthor = article.getAttribute('data-author');
     console.log('articleAuthor: ' + articleAuthor);
     /* generate HTML of the link */
-    const authorHTML = '<a href="#author-' + articleAuthor + '">' + articleAuthor + '</a>';
+    //const authorHTML = '<a href="#author-' + articleAuthor + '">' + articleAuthor + '</a>';
+    const linkHTMLData = {id: 'author-' + articleAuthor, title: articleAuthor};
+    const linkHTML = templates.articleLink(linkHTMLData);
     /* add generated code to html variable */
-    html = html + authorHTML;
+    html = html + linkHTML;
     console.log('html: ' + html);
 
     /* [NEW] check if this link is NOT already in allAuthors */

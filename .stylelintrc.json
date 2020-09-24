@@ -3,6 +3,9 @@
     "stylelint-scss"
   ],
   "rules": {
+    "globals": {
+      "Handlebars": false
+    },
     "block-no-empty": true,
     "color-no-invalid-hex": true,
     "comment-empty-line-before": null,
