@@ -4,6 +4,7 @@
 
 $color-light: #fff;
 $color-dark: #444;
+$color-black: #242424;
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -16,7 +17,7 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: url(https://cdn.pixabay.com/photo/2017/11/13/22/12/compass-2946959_960_720.jpg);
+  background: url(https://images.unsplash.com/photo-1511681838451-8ac6e43fb508?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
   background-size: cover;
   background-attachment: fixed;
   font-family: $font-text;
@@ -24,6 +25,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  margin: 0;
 }
 
 .container {
@@ -76,7 +78,7 @@ body {
 .logo {
   font-family: $font-logo;
   font-weight: 400;
-  font-size: 104px;
+  font-size: 45px;
   line-height: 1;
   text-align: center;
   color: $color-light;
@@ -156,16 +158,17 @@ body {
   color: blueviolet;
 }
 
-/*paper-plane animation*/
+/* Footer */
 
-.animation {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-.paper-plane {
-  position: absolute;
-  height: 100px;
-  top: 50%;
-  left: 0%;
+.page-footer {
+  background: $color-black;
+  color: $color-light;
+  margin-top: 20px;
+
+  p {
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }

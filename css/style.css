@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(https://cdn.pixabay.com/photo/2017/11/13/22/12/compass-2946959_960_720.jpg);
+  background: url(https://images.unsplash.com/photo-1511681838451-8ac6e43fb508?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
   background-size: cover;
   background-attachment: fixed;
   font-family: "Source Sans Pro", sans-serif;
@@ -14,6 +14,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  margin: 0;
 }
 
 .container {
@@ -36,19 +37,16 @@ body {
 
 /* Layout */
 .wrapper {
-  display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
 }
 
 .sidebar {
-  -ms-flex: 1 0 0px;
-      flex: 1 0 0;
+  flex: 1 0 0;
 }
 
 .posts {
-  -ms-flex: 2 0 0px;
-      flex: 2 0 0;
+  flex: 2 0 0;
 }
 
 .sidebar, .posts {
@@ -61,10 +59,8 @@ body {
 
 /* Logo */
 .blog .container h1 {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -72,7 +68,7 @@ body {
 .logo {
   font-family: "Sacramento", cursive;
   font-weight: 400;
-  font-size: 104px;
+  font-size: 45px;
   line-height: 1;
   text-align: center;
   color: #fff;
@@ -114,7 +110,6 @@ body {
 }
 
 .post-tags {
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -152,17 +147,18 @@ body {
   color: blueviolet;
 }
 
-/*paper-plane animation*/
-.animation {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+/* Footer */
+.page-footer {
+  background: #242424;
+  color: #fff;
+  margin-top: 20px;
 }
 
-.paper-plane {
-  position: absolute;
-  height: 100px;
-  top: 50%;
-  left: 0%;
+.page-footer p {
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
+
 /*# sourceMappingURL=style.css.map */
